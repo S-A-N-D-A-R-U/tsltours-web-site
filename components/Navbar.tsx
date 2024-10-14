@@ -1,11 +1,85 @@
-import React from 'react'
+"use client";
+import React, { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { NAV_Link } from "@/constant";
 
 const Navbar = () => {
-  return (
-    <div>
-      Navbar
-    </div>
-  )
-}
+  const [menuOpened, setMenuOpened] = useState(false);
 
-export default Navbar
+  const toggleMenu = () => setMenuOpened(!menuOpened);
+
+  return (
+    <nav className="flex justify-between items-center w-full fixed z-10 shadow-md px-12 py-5 lg:px-24">
+      <Link href="/">
+        <span className="from-neutral-900 text-3xl font-semibold">Tranquil Tours Sri Lanka</span>
+      </Link>
+      <ul className="hidden lg:flex h-full">
+        {NAV_Link.map((link) => (
+          <Link
+            href={link.href}
+            key={link.key}
+            className="flex items-center justify-center gap-2 mx-8 relative text-gray-700 group "
+          >
+            <Image
+              src={link.iconURL}
+              alt={link.label}
+              height={20}
+              width={20}
+              className="h-auto w-4"
+            />
+            {link.label}
+            <span className="inline-block absolute -bottom-2 h-[2px] w-0 bg-black transition-all duration-500 group-hover:w-full"></span>
+          </Link>
+        ))}
+      </ul>
+      <Link href="/">
+        <button className=" hidden lg:block bg-blue-600 px-5 py-2 text-white  rounded-md hover:bg-blue-700 ">
+          Contact Us
+        </button>
+      </Link>
+
+      {/*MOBILE */}
+      {!menuOpened ? (
+        <Image
+          src="menu.svg"
+          alt="menuicon"
+          width={28}
+          height={28}
+          className="lg:hidden inline-block cursor-pointer"
+          onClick={toggleMenu}
+        />
+      ) : (
+        <Image
+          src="close.svg"
+          alt="menuicon"
+          width={28}
+          height={28}
+          className="lg:hidden inline-block cursor-pointer"
+          onClick={toggleMenu}
+        />
+      )}
+      <ul className={menuOpened ? "flex flex-col justify-center p-12 fixed top-14 right-0 bg-slate-50 rounded-lg transition-all duration-500 shadow-md" : "flex flex-col justify-center p-12 fixed top-14 right-[-100%] bg-slate-50 rounded-lg transition-all duration-500 shadow-md" }>
+        {NAV_Link.map((link) => (
+          <Link
+            href={link.href}
+            key={link.key}
+            className="flex gap-1 m-4 relative text-gray-700 group "
+          >
+            <Image
+              src={link.iconURL}
+              alt={link.label}
+              height={20}
+              width={20}
+              className="h-auto w-4"
+            />
+            {link.label}
+            <span className="inline-block absolute -bottom-2 h-[2px] w-0 bg-black transition-all duration-500 group-hover:w-full"></span>
+          </Link>
+        ))}
+      </ul>
+    </nav>
+  );
+};
+
+export default Navbar;
