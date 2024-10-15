@@ -3,3 +3,12 @@
 @tailwind utilities;
 
 
+/* Tailwind CSS Example Classes */
+
+.bg-deep-green { background-color: #2C6E49; }
+.text-soft-blue { color: #4D9DE0; }
+.bg-warm-orange { background-color: #FF8A00; }
+.bg-earthy-beige { background-color: #F4E1D2; }
+.text-charcoal { color: #333333; }
+
+
