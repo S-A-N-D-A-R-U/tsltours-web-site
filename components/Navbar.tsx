@@ -10,7 +10,7 @@ const Navbar = () => {
   const toggleMenu = () => setMenuOpened(!menuOpened);
 
   return (
-    <nav className="flex justify-between items-center w-full fixed z-10 shadow-md px-12 py-5 lg:px-24">
+    <nav className="flex justify-between items-center bg-white w-full fixed shadow-md px-12 py-5  z-50 lg:px-24">
       <Link href="/">
         <span className="from-neutral-900 text-3xl font-semibold">Tranquil Tours Sri Lanka</span>
       </Link>
