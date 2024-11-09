@@ -1,78 +1,84 @@
-import React from 'react'
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 
 const About = () => {
   return (
-    <section className="bg-blue-50 py-16 px-6 lg:px-24">
-      <div className="max-w-7xl mx-auto">
-        {/* Heading */}
-        <h2 className="text-4xl lg:text-5xl font-bold text-charcoal text-center mb-8">
-          About Tranquil Sri Lanka
-        </h2>
-
-        {/* Description */}
-        <p className="text-lg lg:text-xl text-charcoal text-center mb-16 max-w-3xl mx-auto leading-relaxed">
-          Tranquil Sri Lanka is dedicated to providing unforgettable experiences across Sri Lanka's
-          stunning landscapes, rich culture, and diverse wildlife. Our goal is to offer unique travel
-          experiences while maintaining a sustainable and eco-friendly approach to tourism.
-        </p>
-
-        {/* Content: Image & Description */}
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
-          {/* Image */}
-          <div className="flex-1">
-            <Image
-              src="/about-us.jpg" // Ensure the image exists in the public/images folder
-              alt="Sri Lanka Tourism"
-              width={600}
-              height={400}
-              className="rounded-lg shadow-md object-cover"
-            />
-          </div>
-
-          {/* Text Content */}
-          <div className="flex-1">
-            <h3 className="text-3xl font-semibold text-deep-green mb-4">
-              Why Choose Us?
-            </h3>
-            <p className="text-lg text-charcoal mb-6">
-              At Tranquil Sri Lanka, we offer:
-            </p>
-
-            <ul className="text-lg text-charcoal space-y-4">
-              <li className="flex items-center">
-                <span className="bg-blue-400 text-white p-2 rounded-full mr-3">
-                  ✔️
-                </span>
-                Tailor-made itineraries that suit your preferences, budget, and duration of stay.
-              </li>
-              <li className="flex items-center">
-                <span className="bg-blue-400 text-white p-2 rounded-full mr-3">
-                  ✔️
-                </span>
-                Expert guides and a passionate team committed to making your trip memorable.
-              </li>
-              <li className="flex items-center">
-                <span className="bg-blue-400 text-white p-2 rounded-full mr-3">
-                  ✔️
-                </span>
-                Sustainable travel experiences that respect local culture and the environment.
-              </li>
-            </ul>
-
-            <div className="mt-8">
-              <a
-                href="/contact"
-                className="bg-blue-600 text-white py-3 px-6 rounded-lg text-lg hover:bg-blue-700 transition-all duration-300"
-              >
-                Contact Us
-              </a>
-            </div>
-          </div>
+    <section className="bg-blue-50 ">
+      <div className="max-w-7xl m-auto flex md:gap-20 flex-col md:flex-row p-8 lg:px-24">
+        <div className="w-full max-h-screen min-h-96 relative p-8">
+          <Image
+            src="/about-us.jpg" // Ensure the image exists in the public/images folder
+            alt="Sri Lanka Tourism"
+            width={600}
+            height={400}
+            className=" shadow-md object-cover w-[70%] h-[80%] absolute top-0 left-0  "
+          />
+          <Image
+            src="/about-us.jpg" // Ensure the image exists in the public/images folder
+            alt="Sri Lanka Tourism"
+            width={600}
+            height={400}
+            className=" border-[10px] border-blue-50 object-cover w-[50%] h-[60%] absolute bottom-0 right-0  "
+          />
+        </div>
+        <div className="w-full">
+          <h2 className="text-2xl ">ABOUT US</h2>
+          <h2 className="text-3xl font-semibold py-5">
+            WE ARE POFESSIONAL PLANNERS FOR YOUR TRIP
+          </h2>
+          <p className="">
+            Tranquil Sri Lanka is dedicated to providing unforgettable
+            experiences across Sri Lanka's stunning landscapes, rich culture,
+            and diverse wildlife. Our goal is to offer unique travel experiences
+            while maintaining a sustainable and eco-friendly approach to
+            tourism.
+          </p>
+          <h3 className="text-lg py-5">Why Choose Us?</h3>
+          <ul className=" text-charcoal space-y-4">
+            <li className="flex items-center gap-4">
+              <Image
+                src={"/check.svg"}
+                alt={"meals icon"}
+                height={50}
+                width={50}
+                className="h-auto w-6 "
+              />
+              Tailor-made itineraries that suit your preferences, budget, and
+              duration of stay.
+            </li>
+            <li className="flex items-center gap-4">
+              <Image
+                src={"/check.svg"}
+                alt={"meals icon"}
+                height={50}
+                width={50}
+                className="h-auto w-6 "
+              />
+              Expert guides and a passionate team committed to making your trip
+              memorable.
+            </li>
+            <li className="flex items-center gap-4">
+              <Image
+                src={"/check.svg"}
+                alt={"meals icon"}
+                height={50}
+                width={50}
+                className="h-auto w-6 "
+              />
+              Sustainable travel experiences that respect local culture and the
+              environment.
+            </li>
+          </ul>
+          <a
+            href="#"
+            className="mt-6 rounded-lg px-6 py-3 inline-block text-white bg-blue-950 font-semibold"
+          >
+            Read More  &rarr;
+          </a>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default About
+export default About;

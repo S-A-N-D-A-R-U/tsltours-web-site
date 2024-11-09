@@ -46,79 +46,79 @@ const ContactForm = () => {
   
 
   return (
-    <div className="w-full max-w-md ">
-      {!submitted ? (
-        <form className="bg-white  shadow-md rounded-xl p-8 " onSubmit={handleSubmit}>
-          {/* Full Name */}
-          <div className="mb-4">
-            <label className="block text-gray-700 font-semibold">Full Name</label>
-            <input
-              type="text"
-              name="fullName"
-              value={formData.fullName}
-              onChange={handleChange}
-              required
-              className="border border-gray-300 rounded-md p-2 w-full"
-              placeholder="Enter your full name"
-            />
-          </div>
+    <div className="w-full max-w-md">
+  {!submitted ? (
+    <form className="bg-white shadow-md rounded-xl p-5" onSubmit={handleSubmit}>
+      {/* Full Name */}
+      <div className="mb-3">
+        <label className="block text-gray-700 font-semibold">Full Name</label>
+        <input
+          type="text"
+          name="fullName"
+          value={formData.fullName}
+          onChange={handleChange}
+          required
+          className="border border-gray-300 rounded-md p-1 w-full"
+          placeholder="Enter your full name"
+        />
+      </div>
 
-          {/* Email */}
-          <div className="mb-4">
-            <label className="block text-gray-700 font-semibold">Email Address</label>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              className="border border-gray-300 rounded-md p-2 w-full"
-              placeholder="Enter your email address"
-            />
-          </div>
+      {/* Email */}
+      <div className="mb-3">
+        <label className="block text-gray-700 font-semibold">Email Address</label>
+        <input
+          type="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+          className="border border-gray-300 rounded-md p-1 w-full"
+          placeholder="Enter your email address"
+        />
+      </div>
 
-          {/* Subject */}
-          <div className="mb-4">
-            <label className="block text-gray-700 font-semibold">Subject</label>
-            <input
-              type="text"
-              name="subject"
-              value={formData.subject}
-              onChange={handleChange}
-              required
-              className="border border-gray-300 rounded-md p-2 w-full"
-              placeholder="Enter the subject"
-            />
-          </div>
+      {/* Subject */}
+      <div className="mb-3">
+        <label className="block text-gray-700 font-semibold">Subject</label>
+        <input
+          type="text"
+          name="subject"
+          value={formData.subject}
+          onChange={handleChange}
+          required
+          className="border border-gray-300 rounded-md p-1 w-full"
+          placeholder="Enter the subject"
+        />
+      </div>
 
-          {/* Message */}
-          <div className="mb-4">
-            <label className="block text-gray-700 font-semibold">Message</label>
-            <textarea
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-              className="border border-gray-300 rounded-md p-2 w-full"
-              rows= {3}
-              placeholder="Enter your message"
-            ></textarea>
-          </div>
+      {/* Message */}
+      <div className="mb-3">
+        <label className="block text-gray-700 font-semibold">Message</label>
+        <textarea
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+          required
+          className="border border-gray-300 rounded-md p-1 w-full"
+          rows={2} // Reduce the rows to 2
+          placeholder="Enter your message"
+        ></textarea>
+      </div>
 
-          <button
-            type="submit"
-            className="px-6 py-2 bg-blue-600 text-white rounded-md"
-            disabled={loading}
-          >
-            {loading ? "Submitting..." : "Submit"}
-          </button>
-        </form>
-      ) : (
-        <h2 className="text-2xl font-semibold text-green-600 text-center mt-10">
-          Your message has been submitted successfully!
-        </h2>
-      )}
-    </div>
+      <button
+        type="submit"
+        className="px-4 py-1 bg-blue-600 text-white rounded-md"
+        disabled={loading}
+      >
+        {loading ? "Submitting..." : "Submit"}
+      </button>
+    </form>
+  ) : (
+    <h2 className="text-2xl font-semibold text-green-600 text-center mt-10">
+      Your message has been submitted successfully!
+    </h2>
+  )}
+</div>
   );
 };
 
