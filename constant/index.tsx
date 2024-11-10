@@ -1,3 +1,5 @@
+import { title } from "process";
+
 export const NAV_Link = [
   { href: "/", key: "home", label: "Home", iconURL: "/home.svg" },
   { href: "/", key: "about", label: "About", iconURL: "/about.svg" },
@@ -99,3 +101,52 @@ export const WILDLIFE = {
     des:"Day 04Overnight stay in Sorowwa Resort & Spa, HabaranaAfter breakfast depart to the hub of the cultural triangle, the town of Habarana. You can either spend the afternoon relaxing or embark on an exciting safari at Minneriya National Park."
   },
 ]}
+
+export const FEATURE = [
+  {
+    title: "kandy",
+    URL:"/destination/kandy.jpg",
+    des:"3 places",
+  },
+  {
+    title: "Colombo",
+    URL:"/destination/colombo.jpg",
+    des:"3 places",
+  },
+  {
+    title: "Sigiriya",
+    URL:"/destination/sigiriya.jpg",
+    des:"3 places",
+  },
+  {
+    title: "Anuradhapura",
+    URL:"/destination/anuradhapura.jpg",
+    des:"3 places",
+  },
+  {
+    title: "Polonnaruwa",
+    URL:"/destination/polonnaruwa.jpeg",
+    des:"3 places",
+  },
+  {
+    title: "Jaffna",
+    URL:"/destination/jaffna.jpeg",
+    des:"3 places",
+  },
+  {
+    title: "Trincomalee",
+    URL:"/destination/trinco.jpeg",
+    des:"3 places",
+  },
+  {
+    title: "Dambulla",
+    URL:"/destination/dambulla.jpeg",
+    des:"3 places",
+  },
+  {
+    title: "Kumana National Park",
+    URL:"/wild1.jpg",
+    des:"3 places",
+  },
+
+]
