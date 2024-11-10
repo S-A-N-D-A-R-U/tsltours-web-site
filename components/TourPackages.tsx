@@ -1,49 +1,20 @@
 "use client";
-import { useState } from "react";
+
 import { PACKAGES } from "@/constant";
 import React from "react";
 import Image from "next/image";
-import PackageItem from "./PackageItem";
+
 
 const TourPackages = () => {
-  const [activeTab, setActiveTab] = useState<"Popular" | "Luxury" | "Wellness">(
-    "Popular"
-  );
-
-  const tabData = {
-    Popular: { themeColor: "bg-blue-500", packages: PACKAGES },
-    Luxury: { themeColor: "bg-violet-500", packages: PACKAGES },
-    Wellness: { themeColor: "bg-green-500", packages: PACKAGES },
-  };
 
   return (
     <div className="w-full max-w-screen-xl   mx-auto">
-      {/* Tab Navigation */}
-      <div className="flex  justify-center space-x-4 mb-6">
-        {["Popular", "Luxury", "Wellness"].map((tab) => (
-          <button
-            key={tab}
-            onClick={() =>
-              setActiveTab(tab as "Popular" | "Luxury" | "Wellness")
-            }
-            className={`py-2 px-[10%]  font-semibold ${
-              activeTab === tab ? "border-b-4" : ""
-            } ${
-              tabData[tab as keyof typeof tabData].themeColor
-            } text-white rounded-md`}
-          >
-            {tab}
-          </button>
-        ))}
-      </div>
-
-      {/* Tab Content */}
       <section className="max-w-screen-xl mx-auto bg-slate-50  px-8 lg:px-24">
         <h2 className="text-3xl lg:text-4xl font-semibold text-center text-[#003366] mb-12">
           Most Popular Tour Packages
         </h2>
         <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {tabData[activeTab].packages.map((pkg) => (
+          {PACKAGES.map((pkg) => (
             <div
               key={pkg.id}
               className="bg-white max-w-96 rounded-lg shadow-lg  hover:shadow-2xl transition-shadow duration-300"
