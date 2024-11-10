@@ -16,8 +16,6 @@ const page = () => {
       <Feature/>
       <About/>
       <Packages/>
-      <Video/>
-      <Testimonial/>
       <TourPackages/>
       <Blog/>
       <ContactUs/>
