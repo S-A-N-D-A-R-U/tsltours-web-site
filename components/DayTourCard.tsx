@@ -1,21 +1,35 @@
 import React from "react";
+import Image from "next/image";
 
 type DayTourCard = {
+  id: string;
   imageUrl: string;
   title: string;
   description: string;
   price: string;
 };
 
-const DayTourCard = ({ title, imageUrl, description, price }: DayTourCard) => {
+const DayTourCard = ({
+  id,
+  title,
+  imageUrl,
+  description,
+  price,
+}: DayTourCard) => {
   return (
-    <div className="bg-white flex flex-col justify-between shadow-md border-[1px] border-black rounded-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl ">
+    <div className="bg-white flex flex-col h-full justify-between shadow-md border-[1px] border-black rounded-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl ">
       <div>
-        <img src={imageUrl} alt={title} className="w-full h-48 object-cover" />
+        <Image
+          src={imageUrl}
+          alt={title}
+          width={500}
+          height={200}
+          className="  h-52  object-cover"
+        />
         <div className="p-4  ">
           <div className="  overflow-y-clip">
             <h3 className="font-bold text-md">{title}</h3>
-            <p className="text-gray-600 text-sm py-1  font-semibold mb-4">
+            <p className="text-gray-600 text-sm py-1  font-semibold ">
               {description}
             </p>
           </div>

@@ -1,9 +1,10 @@
 "use client";
 import DayTourCard from "@/components/DayTourCard";
 import { useState } from "react";
+import Link from 'next/link';
 
 type Tour = {
-  id: number;
+  id: string;
   title: string;
   description: string;
   category: string;
@@ -13,7 +14,7 @@ type Tour = {
 
 const tours: Tour[] = [
   {
-    id: 1,
+    id: "1",
     title: "Sigiriya & Dambulla",
     description: "16 Hours • Pickup Available • Small Group ",
     category: "Cultural Tours",
@@ -21,7 +22,7 @@ const tours: Tour[] = [
     price: "$40",
   },
   {
-    id: 2,
+    id: "2",
     title: "Whale Watching",
     description: "4 Hours • Pickup Available",
     category: "Water Activities",
@@ -29,7 +30,7 @@ const tours: Tour[] = [
     price: "$65",
   },
   {
-    id: 3,
+    id: "3",
     title: "Yala National Park: Morning or Afternoon Golden Hour Safari",
     description: "10 Hours • Pickup Available",
     category: "Wildlife Safari",
@@ -37,7 +38,7 @@ const tours: Tour[] = [
     price: "$35",
   },
   {
-    id: 4,
+    id: "4",
     title: "Tea Plantation Tour",
     description: "8 Hours • Pickup Available",
     category: "Tea Plantations",
@@ -45,28 +46,20 @@ const tours: Tour[] = [
     price: "$50",
   },
   {
-    id: 4,
+    id: "4",
     title: "Tea Plantation Tour",
     description: "8 Hours • Pickup Available",
     category: "Tea Plantations",
     imageUrl: "/Tea Plantation Tour.jpg",
-    price: "$70",
+    price: "$50",
   },
   {
-    id: 4,
+    id: "4",
     title: "Tea Plantation Tour",
     description: "8 Hours • Pickup Available",
     category: "Tea Plantations",
     imageUrl: "/Tea Plantation Tour.jpg",
-    price: "$30",
-  },
-  {
-    id: 4,
-    title: "Tea Plantation Tour",
-    description: "8 Hours • Pickup Available",
-    category: "Tea Plantations",
-    imageUrl: "/Tea Plantation Tour.jpg",
-    price: "$70",
+    price: "$50",
   },
 ];
 
@@ -92,7 +85,7 @@ const page = () => {
       : tours.filter((tour) => tour.category === activeCategory);
 
   return (
-    <div className="relative w-full  mt-20">
+    <div className="relative w-full  my-20">
       <div className="max-w-7xl m-auto px-8 ">
         <h1 className="text-3xl py-7  text-blue-950 font-bold text-center md:text-5xl md:text-left">
           Day Tours and Activities
@@ -116,7 +109,7 @@ const page = () => {
         {/* Tour Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {filteredTours.slice(0, 8).map((tour) => (
-            <DayTourCard  key={tour.id} title={tour.title} imageUrl={tour.imageUrl} description={tour.description} price={tour.price}/>
+            <Link href={`/daytour/${tour.id}`}><DayTourCard id={tour.id} key={tour.id} title={tour.title} imageUrl={tour.imageUrl} description={tour.description} price={tour.price}/></Link>
           ))}
         </div>
       </div>

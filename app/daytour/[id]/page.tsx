@@ -1,9 +1,22 @@
+'use client'
 import React from "react";
 import Image from "next/image";
 import { DayTours } from "@/constant";
-import { AiOutlineCloseCircle } from "react-icons/ai";
+import { useParams } from 'next/navigation';
 
 const page = () => {
+  const { id } = useParams(); 
+  const tour = DayTours.find((tour) => tour.id === id);
+
+  if (!tour) {
+    return (
+      <div>
+        <h1>Tour Not Found</h1>
+        <p>We couldn’t find the tour you were looking for. Please check the ID or explore our other packages.</p>
+      </div>
+    );
+  }
+
   return (
     <div className="relative w-full  mt-20">
       <div className="relative w-full h-[40vh] md:h-[65vh]">
@@ -20,18 +33,18 @@ const page = () => {
       <div className="max-w-xl  md:max-w-7xl flex flex-col p-5  md:flex-row md:justify-between m-auto md:py-10  ">
         <div className="md:pr-10 md:w-3/4 ">
           <h3 className=" font-bold text-lg sm:text-2xl mb-5 text-center md:text-left  md:text-4xl ">
-            {DayTours.info?.title}
+            {tour.info?.title}
           </h3>
           <h3 className=" text-sm mb-5 md:text-xl p-2 bg-black text-white inline">
-            {DayTours.info?.day}
+            {tour.info?.day}
           </h3>
           <p className=" text-sm mt-2 md:mt-4 py-2 lg:text-lg">
-            {DayTours.info?.des}
+            {tour.info?.des}
           </p>
         </div>
         <div className="flex flex-col md:w-1/4 justify-center items-center md:items-stretch md:justify-normal">
           <h3 className="font-bold text-blue-700 text-2xl mb-5 ">
-            {DayTours.info?.price}
+            {tour.info?.price}
           </h3>
           <button className="bg-blue-950 py-4 text-white rounded-lg px-10">
             Inquire Now
@@ -65,7 +78,7 @@ const page = () => {
           <h3 className="font-semibold text-xl mb-2">Highlights</h3>
           <div className="flex flex-col md:flex-row gap-1">
             <div className="w-full flex flex-col gap-1">
-              {DayTours.Highlights?.map((item) => (
+              {tour.Highlights?.map((item) => (
                 <div className="flex flex-row items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-orange-600"></div>
                   <p>{item}</p>
@@ -80,29 +93,29 @@ const page = () => {
           <h3 className="font-semibold text-xl mb-2">Included with tour</h3>
           <div className="flex flex-col md:flex-row gap-1">
             <div className="w-full flex flex-col gap-1">
-              {DayTours.Includes?.include?.map((item) => (
+              {tour.Includes?.include?.map((item) => (
                 <div className="flex flex-row items-center gap-2">
                   <Image
-                src={"/bx-check-circle-green.svg"}
-                alt={"bx-check-circle-green icon"}
-                height={50}
-                width={50}
-                className="h-auto w-6"
-              />
+                    src={"/bx-check-circle-green.svg"}
+                    alt={"bx-check-circle-green icon"}
+                    height={50}
+                    width={50}
+                    className="h-auto w-6"
+                  />
                   <p>{item}</p>
                 </div>
               ))}
             </div>
             <div className="w-full flex flex-col gap-1">
-            {DayTours.Includes?.notInclude?.map((item) => (
+              {tour.Includes?.notInclude?.map((item) => (
                 <div className="flex flex-row items-center gap-2">
                   <Image
-                src={"/close-circle-svgrepo-com.svg"}
-                alt={"close-circle icon"}
-                height={50}
-                width={50}
-                className="h-auto w-5"
-              />
+                    src={"/close-circle-svgrepo-com.svg"}
+                    alt={"close-circle icon"}
+                    height={50}
+                    width={50}
+                    className="h-auto w-5"
+                  />
                   <p>{item}</p>
                 </div>
               ))}

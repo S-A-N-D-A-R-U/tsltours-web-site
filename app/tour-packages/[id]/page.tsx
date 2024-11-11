@@ -1,8 +1,20 @@
-import { WILDLIFE } from "@/constant";
+'use client'
+import {TourPackagesdetails } from "@/constant";
 import Image from "next/image";
 import React from "react";
+import { useParams } from 'next/navigation';
 
 const page = () => {
+  const { id } = useParams();
+  const tour = TourPackagesdetails.find((tour) => tour.id === id);
+  if (!tour) {
+    return (
+      <div>
+        <h1>Tour Not Found</h1>
+        <p>We couldn’t find the tour you were looking for. Please check the ID or explore our other packages.</p>
+      </div>
+    );
+  }
   return (
     <div className="relative w-full  mt-20">
       <div className="relative w-full h-[40vh] md:h-[65vh]">
@@ -18,18 +30,18 @@ const page = () => {
       <div className="max-w-xl  md:max-w-7xl flex flex-col p-5  md:flex-row md:justify-between m-auto md:py-10  ">
         <div className="md:pr-10 md:w-3/4 ">
           <h3 className=" font-bold text-lg sm:text-2xl mb-5 text-center md:text-left  md:text-4xl ">
-            {WILDLIFE.info?.title}
+            {tour.info?.title}
           </h3>
           <h3 className=" text-sm mb-5 md:text-xl p-2 bg-black text-white inline">
-            {WILDLIFE.info?.day}
+            {tour.info?.day}
           </h3>
           <p className=" text-sm mt-2 md:mt-4 py-2 lg:text-lg">
-            {WILDLIFE.info?.des}
+            {tour.info?.des}
           </p>
         </div>
         <div className="flex flex-col md:w-1/4 justify-center items-center md:items-stretch md:justify-normal">
           <h3 className="font-bold text-blue-700 text-2xl mb-5 ">
-            {WILDLIFE.info?.price}
+            {tour.info?.price}
           </h3>
           <button className="bg-blue-950 py-4 text-white rounded-lg px-10">
             Inquire Now
@@ -92,7 +104,7 @@ const page = () => {
           ITINERARY
         </h1>
 
-        {WILDLIFE.itinerary?.map((item, index) => (
+        {tour.itinerary?.map((item, index) => (
           <div key={index}>
             <div className="w-full max-w-lg md:max-w-7xl md:mt-8 flex flex-col md:flex-row md:justify-evenly mx-auto p-5">
               <h3 className=" md:p-2 lg:p-5  hidden md:block text-xl md:text-xl lg:text-3xl font-bold text-center md:min-w-32">
