@@ -150,3 +150,17 @@ export const FEATURE = [
   },
 
 ]
+
+export const DayTours = {
+  info:{
+      title: "Yala National Park: Morning or Afternoon Golden Hour Safari",
+      des:"This is a tour that introduces guests to the best wild life sanctuaries in Sri Lanka as well as including fascinating adventures like a nature trail, a forest trek and a bullock cart ride, concluding with a couple of relaxing day on the beach by the Indian Ocean. This journey of discovery begins with a drive northwards along the west coast to the seldom-visited Wilpattu National Park for two nights, then south to the centre of the Cultural Triangle with an opportunity to visit another National Park. There’s an arranged encounter with Veddas, and a night in the old capital of the medieval kingdom of Kandy with its Temple of the Tooth and grand Edwardian buildings.",
+      day : "Duration 4 - 12 hours",
+      price: "$250/Person"
+  },
+  Highlights:["Experience a thrill to spot the wildlife of Yala National Park on a guided tour", "See the leopards, elephants, and sloth bears n their natural habitat", "Enjoy the golden hours of the day to capture stunning images of the animals", "Listen to facts about the animals and area from your expert guide", "Explore the greenery of the light forests, scrubs, grasslands, and more" ],
+  Includes: {
+    include:["Hotel pickup from the Yala area, including Kirinda, Palatupana, Tissamaharama, Weerawila, and Kataragama", "Transportation in a Safari Jeep (maximum of 6 passengers per jeep)", "Full-day or half-day tour (depending on option selected)", "Picnic lunch (if option selected)"],
+    notInclude:["Park entrance fee (40 USD Per person)","Snacks and drinks"],
+  },
+}
