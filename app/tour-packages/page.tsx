@@ -95,7 +95,7 @@ const categories = [
   "Road Trips",
   "Romance",
 ];
-const page = () => {
+const TourPackagesPage = () => {
   const [activeCategory, setActiveCategory] = useState("All");
 
   const filteredTours =
@@ -136,4 +136,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default TourPackagesPage;

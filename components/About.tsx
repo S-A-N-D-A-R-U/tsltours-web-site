@@ -28,7 +28,7 @@ const About = () => {
           </h2>
           <p className="">
             Tranquil Sri Lanka is dedicated to providing unforgettable
-            experiences across Sri Lanka's stunning landscapes, rich culture,
+            experiences across Sri Lanka&apos;s stunning landscapes, rich culture,
             and diverse wildlife. Our goal is to offer unique travel experiences
             while maintaining a sustainable and eco-friendly approach to
             tourism.

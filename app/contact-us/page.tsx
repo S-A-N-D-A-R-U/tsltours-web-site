@@ -2,7 +2,7 @@
 
 import { FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 
-const Contact = () => {
+const ContactPage = () => {
   return (
     <div className="max-w-5xl mx-auto px-4 py-12 text-center space-y-8">
       <h1 className="text-4xl font-semibold text-[#003366]">Contact Us</h1>
@@ -48,4 +48,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ContactPage;

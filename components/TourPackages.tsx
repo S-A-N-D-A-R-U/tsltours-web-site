@@ -15,6 +15,7 @@ const TourPackages = () => {
         <div className="grid grid-cols-1  md:grid-cols-3  lg:grid-cols-3 gap-6">
           {PACKAGES.map((pkg) => (
           <TourPackageItemcard
+          key={pkg.id}
           id={pkg.id}
           title={pkg.title}
           imageUrl={pkg.imageUrl}

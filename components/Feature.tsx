@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import Slider from "react-slick";
 import { FEATURE } from "@/constant";
@@ -6,33 +6,43 @@ import FeatureItem from "./FeatureItem";
 import Link from 'next/link';
 import { RiArrowRightSLine, RiArrowLeftSLine } from "react-icons/ri";
 
+interface ArrowProps {
+  onClick?: () => void;
+}
+
 const Feature = () => {
  
-  const NextArrow = (props: any) => {
-    const {onClick} = props;
-    return(
-      <div onClick={onClick} className="text-3xl bg-white p-2  rounded-full inline-block shadow-md absolute top-1/2 -right-3 z-10 hover:bg-slate-100"><RiArrowRightSLine/></div>
-    )
-
+  const NextArrow = ({ onClick }: ArrowProps) => {
+    return (
+      <div
+        onClick={onClick}
+        className="text-3xl bg-white p-2 rounded-full inline-block shadow-md absolute top-1/2 -right-3 z-10 hover:bg-slate-100"
+      >
+        <RiArrowRightSLine />
+      </div>
+    );
   };
-  const PrevArrow = (props: any) => {
-    const {onClick} = props;
-    return(
-      <div onClick={onClick} className="text-3xl bg-white p-2 rounded-full inline-block shadow-md absolute top-1/2 -left-3 z-10 hover:bg-slate-100"><RiArrowLeftSLine/></div>
-    )
 
+  const PrevArrow = ({ onClick }: ArrowProps) => {
+    return (
+      <div
+        onClick={onClick}
+        className="text-3xl bg-white p-2 rounded-full inline-block shadow-md absolute top-1/2 -left-3 z-10 hover:bg-slate-100"
+      >
+        <RiArrowLeftSLine />
+      </div>
+    );
   };
-  
 
-  var settings = {
+  const settings = {
     arrow: true,
     autoplay: true,
     Infinity: true,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    nextArrow: <NextArrow/>,
-    prevArrow: <PrevArrow/>,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     responsive: [
       {
         breakpoint: 1280,
@@ -45,7 +55,7 @@ const Feature = () => {
         settings: {
           slidesToShow: 3,
         },
-      }, 
+      },
       {
         breakpoint: 768,
         settings: {
@@ -58,7 +68,7 @@ const Feature = () => {
           slidesToShow: 1,
         },
       },
-    ]
+    ],
   };
 
   return (
@@ -70,17 +80,15 @@ const Feature = () => {
       </div>
       <div className="pt-16">
         <Slider {...settings}>
-        {
-          FEATURE.map((feature) => (
-            <Link href="/destination"><FeatureItem
-            key={feature.title}
-            title={feature.title}
-            URL = {feature.URL}
-            des={feature.des}
-            /></Link>
-            
-          ))
-        }
+          {FEATURE.map((feature) => (
+            <Link href="/destination" key={feature.title}>
+              <FeatureItem
+                title={feature.title}
+                URL={feature.URL}
+                des={feature.des}
+              />
+            </Link>
+          ))}
         </Slider>
       </div>
     </section>

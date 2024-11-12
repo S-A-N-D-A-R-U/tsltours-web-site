@@ -4,7 +4,7 @@ import Image from "next/image";
 import { DayTours } from "@/constant";
 import { useParams } from 'next/navigation';
 
-const page = () => {
+const DayToursPage = () => {
   const { id } = useParams(); 
   const tour = DayTours.find((tour) => tour.id === id);
 
@@ -78,8 +78,8 @@ const page = () => {
           <h3 className="font-semibold text-xl mb-2">Highlights</h3>
           <div className="flex flex-col md:flex-row gap-1">
             <div className="w-full flex flex-col gap-1">
-              {tour.Highlights?.map((item) => (
-                <div className="flex flex-row items-center gap-2">
+              {tour.Highlights?.map((item, index) => (
+                <div key={index} className="flex flex-row items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-orange-600"></div>
                   <p>{item}</p>
                 </div>
@@ -93,8 +93,8 @@ const page = () => {
           <h3 className="font-semibold text-xl mb-2">Included with tour</h3>
           <div className="flex flex-col md:flex-row gap-1">
             <div className="w-full flex flex-col gap-1">
-              {tour.Includes?.include?.map((item) => (
-                <div className="flex flex-row items-center gap-2">
+              {tour.Includes?.include?.map((item, index) => (
+                <div key={index} className="flex flex-row items-center gap-2">
                   <Image
                     src={"/bx-check-circle-green.svg"}
                     alt={"bx-check-circle-green icon"}
@@ -107,8 +107,8 @@ const page = () => {
               ))}
             </div>
             <div className="w-full flex flex-col gap-1">
-              {tour.Includes?.notInclude?.map((item) => (
-                <div className="flex flex-row items-center gap-2">
+              {tour.Includes?.notInclude?.map((item, index) => (
+                <div key={index} className="flex flex-row items-center gap-2">
                   <Image
                     src={"/close-circle-svgrepo-com.svg"}
                     alt={"close-circle icon"}
@@ -142,4 +142,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default DayToursPage;

@@ -4,7 +4,7 @@ import Image from "next/image";
 import React from "react";
 import { useParams } from 'next/navigation';
 
-const page = () => {
+const TourPackagesIDPage = () => {
   const { id } = useParams();
   const tour = TourPackagesdetails.find((tour) => tour.id === id);
   if (!tour) {
@@ -155,4 +155,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default TourPackagesIDPage;

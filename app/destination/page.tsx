@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-const page = () => {
+const DestinationPage = () => {
   return (
     <div className="relative w-full max-w-7xl mx-auto  mt-20">
       <div className="relative w-full h-[40vh] md:h-[60vh]">
@@ -66,4 +66,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default DestinationPage;

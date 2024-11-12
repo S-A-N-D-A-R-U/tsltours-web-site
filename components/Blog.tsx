@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const Blog = () => {
   return (
@@ -13,10 +14,12 @@ const Blog = () => {
           {/* Left column: One large card, spans 4 out of 6 columns */}
           <div className="lg:col-span-2 bg-white shadow-md rounded-lg overflow-hidden">
             <div className="flex flex-col h-full">
-              <img
+              <Image
                 className="h-64 w-full object-cover"
                 src="https://source.unsplash.com/random/800x600?nature"
                 alt="Nature"
+                width={800}
+                height={600}
               />
               <div className="p-6">
                 <div className="text-sm text-gray-500 mb-2">24 July, 2024</div>
@@ -42,10 +45,12 @@ const Blog = () => {
           <div className="lg:col-span-4 grid grid-rows-2 gap-5">
             {/* Top right: One horizontal card across the top middle and right */}
             <div className="flex flex-row bg-white shadow-md rounded-lg overflow-hidden">
-              <img
+              <Image
                 className="h-32 w-full object-cover"
                 src="https://source.unsplash.com/random/800x600?city"
                 alt="City"
+                width={800}
+                height={600}
               />
               <div className="p-6">
                 <div className="text-sm text-gray-500 mb-2">
@@ -69,10 +74,12 @@ const Blog = () => {
 
             {/* Bottom right: One horizontal card across the bottom middle and right */}
             <div className=" flex flex-row bg-white shadow-md rounded-lg overflow-hidden">
-              <img
+              <Image
                 className="h-32 w-full object-cover"
                 src="https://source.unsplash.com/random/800x600?mountain"
                 alt="Mountain"
+                width={800}
+                height={600}
               />
               <div className="p-6">
                 <div className="text-sm text-gray-500 mb-2">24 March, 2024</div>
@@ -81,7 +88,7 @@ const Blog = () => {
                 </h3>
                 <p className="mt-2 text-gray-600">
                   Experience the thrill of hiking and outdoor activities in the
-                  world's best mountain ranges.
+                  world&apos;s best mountain ranges.
                 </p>
                 <a
                   href="#"

@@ -1,7 +1,7 @@
 "use client";
 import DayTourCard from "@/components/DayTourCard";
 import { useState } from "react";
-import Link from 'next/link';
+
 
 type Tour = {
   id: string;
@@ -76,7 +76,7 @@ const categories = [
   "Religious Sites",
   "Ayurveda & Wellness",
 ];
-const page = () => {
+const ToursPage = () => {
   const [activeCategory, setActiveCategory] = useState("All");
 
   const filteredTours =
@@ -117,4 +117,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default ToursPage;
