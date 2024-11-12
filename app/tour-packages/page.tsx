@@ -2,16 +2,18 @@
 import { useState } from "react";
 import TourPackageItemcard from "@/components/TourPackageItemcard";
 
-type Tour = {
+export type Tour = {
   id: string;
   title: string;
   description: string;
   category: string;
   imageUrl: string;
   price: string;
+  rating: number;
+  duration: string;
 };
 
-export const tours = [
+const tours: Tour[] = [
   {
     id: "1",
     title: "Hill Country Tours",
