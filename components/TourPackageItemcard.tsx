@@ -32,7 +32,7 @@ const TourPackageItemcard = ({
         <h3 className="text-xl font-semibold mb-2">{title}</h3>
         <p className="text-sm h-20 overflow-hidden">{description}</p>
         <p className="text-2xl font-bold text-[#003366] mb-2 ">
-          ${price}.00/Person
+          {price}.00/Person
         </p>
         <hr className="mb-2" />
         <div className="flex justify-between items-center">

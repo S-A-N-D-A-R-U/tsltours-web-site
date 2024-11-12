@@ -4,13 +4,13 @@ export const NAV_Link = [
   { href: "/", key: "home", label: "Home", iconURL: "/home.svg" },
   { href: "/", key: "about", label: "About", iconURL: "/about.svg" },
   {
-    href: "/",
+    href: "/tour-packages",
     key: " tour packages",
     label: " TourPackages",
     iconURL: "/earth.svg",
   },
   {
-    href: "/",
+    href: "/tours",
     key: " day excursions",
     label: "Day Excursions",
     iconURL: "/earth.svg",
@@ -21,7 +21,7 @@ export const PACKAGES = [
   {
     id: "1",
     title: "Hill Country Tours",
-    price: "240",
+    price: "$240",
     rating: 4.8,
     description:
       "The hill country of Sri Lanka reflects the aspirations of 19th & 20th century British colonisers to create a home away from home.",
@@ -31,7 +31,7 @@ export const PACKAGES = [
   {
     id: "2",
     title: "Cultural Heritage Tour",
-    price: "240",
+    price: "$240",
     rating: 4.8,
     description:
       "Our cultural tours are conducted by guides knowledgeable in all aspects of the island’s history, enabling you to realise our unique heritage",
@@ -41,7 +41,7 @@ export const PACKAGES = [
   {
     id: "3",
     title: "Beach Tours",
-    price: "240",
+    price: "$240",
     rating: 4.8,
     description:
       "We know the best beaches, hidden bays and secret coves for sunbathing, swimming or surfing to reward you with an unforgettable beach holiday",
@@ -51,7 +51,7 @@ export const PACKAGES = [
   {
     id: "4",
     title: "Ayurvedic Tours",
-    price: "240",
+    price: "$240",
     rating: 4.8,
     description:
       "Ayurveda is an ancient, traditional wellness therapy based on harmonious balance within the body achieved through herbal diet and massage treatment",
@@ -61,7 +61,7 @@ export const PACKAGES = [
   {
     id: "5",
     title: "Honeymoon Tours",
-    price: "240",
+    price: "$240",
     rating: 4.8,
     description:
       "Private beach villas, secluded colonial bungalows, and luxurious hotel suites make Sri Lanka an ideal destination for honeymoons and weddings",
@@ -71,7 +71,7 @@ export const PACKAGES = [
   {
     id: "6",
     title: "Wildlife",
-    price: "240",
+    price: "$240",
     rating: 4.8,
     description:
       "Our Seat-in Coach Tours give you the ability to book an authentic travel experience of Sri Lanka without having to go through the hassle of arranging  ...",

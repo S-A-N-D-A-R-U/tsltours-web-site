@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import Link from 'next/link';
 
 
 const sliderImages = ["/hero1.jpg", "/hero2.jpg", "/hero3.jpg"];
@@ -50,9 +51,10 @@ const Hero = () => {
           Experience the rich culture, adventure, and breathtaking landscapes
           with Tranquil Sri Lanka.
         </p>
-        <button className="bg-teal-500 text-white py-3 px-6 rounded-lg shadow-lg hover:bg-teal-600 transition duration-300 text-sm md:text-lg">
+        <Link href="/plan-tour"><button className="bg-[#003366] border border-white text-white py-3 px-6 rounded-lg shadow-lg hover:bg-[#004080] transition duration-300 text-sm md:text-lg">
           Plan Your Tour
-        </button>
+        </button></Link>
+        
       </div>
     </div>
   );

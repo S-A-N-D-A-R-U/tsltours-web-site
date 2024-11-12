@@ -109,7 +109,7 @@ const page = () => {
         {/* Tour Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {filteredTours.slice(0, 8).map((tour) => (
-            <Link href={`/daytour/${tour.id}`}><DayTourCard id={tour.id} key={tour.id} title={tour.title} imageUrl={tour.imageUrl} description={tour.description} price={tour.price}/></Link>
+            <DayTourCard id={tour.id} key={tour.id} title={tour.title} imageUrl={tour.imageUrl} description={tour.description} price={tour.price}/>
           ))}
         </div>
       </div>

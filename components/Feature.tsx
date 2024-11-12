@@ -3,7 +3,7 @@ import React from "react";
 import Slider from "react-slick";
 import { FEATURE } from "@/constant";
 import FeatureItem from "./FeatureItem";
-import { title } from "process";
+import Link from 'next/link';
 import { RiArrowRightSLine, RiArrowLeftSLine } from "react-icons/ri";
 
 const Feature = () => {
@@ -64,7 +64,7 @@ const Feature = () => {
   return (
     <section className="max-w-7xl m-auto p-12 px-5">
       <div>
-        <h3 className="font-bold text-center text-5xl ">
+        <h3 className="text-3xl lg:text-5xl font-semibold text-center text-[#003366] ">
           Featured Destination
         </h3>
       </div>
@@ -72,12 +72,13 @@ const Feature = () => {
         <Slider {...settings}>
         {
           FEATURE.map((feature) => (
-            <FeatureItem
+            <Link href="/destination"><FeatureItem
             key={feature.title}
             title={feature.title}
             URL = {feature.URL}
             des={feature.des}
-            />
+            /></Link>
+            
           ))
         }
         </Slider>
