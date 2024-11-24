@@ -33,7 +33,7 @@ export async function POST(req: Request) {
     // Construct the email content
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: process.env.CONTACT_EMAIL, // Your contact email
+      to: process.env.CONTACT_EMAIL,
       subject: 'New Custom Tour Request Submitted',
       text: `
         A new custom tour request was submitted.

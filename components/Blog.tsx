@@ -16,7 +16,7 @@ const Blog = () => {
             <div className="flex flex-col h-full">
               <Image
                 className="h-64 w-full object-cover"
-                src="https://source.unsplash.com/random/800x600?nature"
+                src=""
                 alt="Nature"
                 width={800}
                 height={600}
@@ -47,7 +47,7 @@ const Blog = () => {
             <div className="flex flex-row bg-white shadow-md rounded-lg overflow-hidden">
               <Image
                 className="h-32 w-full object-cover"
-                src="https://source.unsplash.com/random/800x600?city"
+                src=""
                 alt="City"
                 width={800}
                 height={600}
@@ -76,7 +76,7 @@ const Blog = () => {
             <div className=" flex flex-row bg-white shadow-md rounded-lg overflow-hidden">
               <Image
                 className="h-32 w-full object-cover"
-                src="https://source.unsplash.com/random/800x600?mountain"
+                src=""
                 alt="Mountain"
                 width={800}
                 height={600}
