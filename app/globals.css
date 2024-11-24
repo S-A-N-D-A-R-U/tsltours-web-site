@@ -10,3 +10,16 @@
 .bg-warm-orange { background-color: #FF8A00; }
 .bg-earthy-beige { background-color: #F4E1D2; }
 .text-charcoal { color: #333333; }
+
+
+.hero_stroke {
+    text-shadow: 
+    2px 2px 0 rgba(0, 0, 0, 0.5), 
+    -2px 2px 0 rgba(0, 0, 0, 0.5), 
+    2px -2px 0 rgba(0, 0, 0, 0.5), 
+    -2px -2px 0 rgba(0, 0, 0, 0.5),
+    0px 2px 0 rgba(0, 0, 0, 0.5),
+    2px 0px 0 rgba(0, 0, 0, 0.5),
+    -2px 0px 0 rgba(0, 0, 0, 0.5),
+    0px -2px 0 rgba(0, 0, 0, 0.5);
+}

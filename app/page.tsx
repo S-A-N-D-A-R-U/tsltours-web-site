@@ -12,8 +12,8 @@ const page = () => {
   return (
     <div >
       <Hero/>
-      <Feature/>
       <About/>
+      <Feature/>
       <TourPackages/>
       <DayTours/>
       <Blog/>
