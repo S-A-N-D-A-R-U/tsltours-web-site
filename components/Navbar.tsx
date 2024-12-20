@@ -4,6 +4,30 @@ import Image from "next/image";
 import Link from "next/link";
 import { NAV_Link } from "@/constant";
 
+
+const destinations = [
+  {
+    name: 'Colombo',
+    activities: ['City Tours', 'Temple Visits', 'Shopping Districts']
+  },
+  {
+    name: 'Kandy',
+    activities: ['Temple of Tooth', 'Botanical Gardens', 'Cultural Shows']
+  },
+  {
+    name: 'Galle',
+    activities: ['Fort Walking Tour', 'Beach Activities', 'Historical Sites']
+  },
+  {
+    name: 'Ella',
+    activities: ['Train Rides', 'Nine Arch Bridge', 'Little Adams Peak']
+  },
+  {
+    name: 'Yala',
+    activities: ['Wildlife Safaris', 'Bird Watching', 'Camping']
+  }
+];
+
 const Navbar = () => {
   const [menuOpened, setMenuOpened] = useState(false);
 

@@ -2,17 +2,41 @@ import { title } from "process";
 
 export const NAV_Link = [
   { href: "/", key: "home", label: "Home", iconURL: "/home.svg" },
-  { href: "/", key: "about", label: "About", iconURL: "/about.svg" },
   {
     href: "/tour-packages",
     key: " tour packages",
-    label: " TourPackages",
+    label: "Tours",
     iconURL: "/earth.svg",
   },
   {
     href: "/tours",
     key: " day excursions",
-    label: "Day Excursions",
+    label: "Seat in Coach",
+    iconURL: "/earth.svg",
+  },
+  {
+    href: "/tours",
+    key: " day excursions",
+    label: "Things to do",
+    iconURL: "/earth.svg",
+  },
+  
+  {
+    href: "/tours",
+    key: " day excursions",
+    label: "Offers",
+    iconURL: "/earth.svg",
+  },
+  {
+    href: "/tours",
+    key: " day excursions",
+    label: "Transpotation",
+    iconURL: "/earth.svg",
+  },
+  {
+    href: "/tours",
+    key: " day excursions",
+    label: "Travel guide",
     iconURL: "/earth.svg",
   },
 ];

@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
-const sliderImages = ["/hero1.jpg", "/hero2.jpg", "/hero3.jpg"];
+const sliderImages = ["/hero1.jpg", "/hero2.jpg", "/hero3.jpg", "/hero4.jpg", "/hero5.jpg", "/hero6.jpg","/hero7.jpg","/hero8.jpg","/hero9.jpg","/hero10.jpg", "/hero11.jpg", "/hero12.jpg", "/hero13.jpg", "/hero14.jpg", "/hero15.jpg", "/hero16.jpg", "/hero17.jpg",];
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -42,8 +42,8 @@ const Hero = () => {
       ))}
 
       {/* Overlay and Content */}
-      <div className="absolute inset-0 bg-black bg-opacity-30 z-10 flex flex-col justify-center items-center text-center px-4 md:px-8">
-        <h1 className="text-4xl md:text-6xl hero_stroke text-white font-bold mb-4 stroke-blue-950">
+      <div className="absolute inset-0 bg-black bg-opacity-0 z-10 flex flex-col justify-center items-start text-center px-4 md:px-8 md:pl-16">
+        <h1 className= "text-4xl md:text-6xl hero_stroke text-blue-200 font-bold mb-4 stroke-blue-950">
           Discover the Beauty of Sri Lanka
         </h1>
         <p className="text-lg md:text-xl text-white mb-8">
