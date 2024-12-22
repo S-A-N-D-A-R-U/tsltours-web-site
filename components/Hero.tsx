@@ -1,10 +1,30 @@
 "use client";
 import React from "react";
+import { ChevronDown, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { FloatingStats } from "./FloatingStats";
 
-const sliderImages = ["/hero1.jpg", "/hero2.jpg", "/hero3.jpg", "/hero4.jpg", "/hero5.jpg", "/hero6.jpg","/hero7.jpg","/hero8.jpg","/hero9.jpg","/hero10.jpg", "/hero11.jpg", "/hero12.jpg", "/hero13.jpg", "/hero14.jpg", "/hero15.jpg", "/hero16.jpg", "/hero17.jpg",];
+const sliderImages = [
+  "/hero1.jpg",
+  "/hero2.jpg",
+  "/hero3.jpg",
+  "/hero4.jpg",
+  "/hero5.jpg",
+  "/hero6.jpg",
+  "/hero7.jpg",
+  "/hero8.jpg",
+  "/hero9.jpg",
+  "/hero10.jpg",
+  "/hero11.jpg",
+  "/hero12.jpg",
+  "/hero13.jpg",
+  "/hero14.jpg",
+  "/hero15.jpg",
+  "/hero16.jpg",
+  "/hero17.jpg",
+];
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -42,26 +62,35 @@ const Hero = () => {
       ))}
 
       {/* Overlay and Content */}
-      <div className="absolute inset-0 bg-black bg-opacity-0 z-10 flex flex-col justify-center items-start text-center px-4 md:px-8 md:pl-16">
-        <h1 className= "text-4xl md:text-6xl hero_stroke text-blue-200 font-bold mb-4 stroke-blue-950">
-          Discover the Beauty of Sri Lanka
-        </h1>
-        <p className="text-lg md:text-xl text-white mb-8">
-          Experience the rich culture, adventure, and breathtaking landscapes
-          with Tranquil Sri Lanka.
-        </p>
-        <Link href="/plan-tour">
-          <button className="bg-[#003366] border border-white text-white py-3 px-6 rounded-lg shadow-lg hover:bg-[#004080] transition duration-300 text-sm md:text-lg">
-            Plan Your Tour
-          </button>
-        </Link>
+      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/10 to-transparent z-10 flex flex-col justify-center items-start  px-4 md:px-8 md:pl-16">
+        <div className=" max-w-4xl space-y-8">
+          <h1 className="animate-fade-in text-6xl font-bold leading-tight text-white md:text-7xl">
+            Experience the Wonder of
+            <span className="mt-2 block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              Sri Lanka
+            </span>
+          </h1>
+          <p className="animate-fade-in text-xl text-gray-200 [animation-delay:200ms] md:text-2xl">
+            Discover ancient temples, pristine beaches, and lush landscapes in this tropical paradise.
+            Your extraordinary journey begins here.
+          </p>
+          <Link href="/plan-tour">
+            <button className="group mt-5 relative inline-flex items-center gap-2 bg-blue-600 px-8 py-4 font-semibold text-white transition-all duration-300 hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/30">
+              Start Your Journey
+              <ChevronRight className="transition-transform group-hover:translate-x-1" />
+            </button>
+          </Link>
+        </div>
+
         {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-8 h-12 rounded-full border-2 border-white flex items-start justify-center p-2">
-            <div className="w-1 h-3 bg-white rounded-full animate-scroll"></div>
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-white">
+          <div className="flex flex-col items-center gap-2">
+            <span className="text-sm font-medium">Scroll to explore</span>
+            <ChevronDown className="h-5 w-5" />
           </div>
         </div>
       </div>
+      
     </div>
   );
 };
