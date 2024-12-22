@@ -1,92 +1,132 @@
-import React from 'react'
+import React from "react";
 import Image from "next/image";
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaYoutube,
-  FaPinterest,
-  FaTripadvisor,
-} from 'react-icons/fa';
 
+import {
+    FaFacebookF,
+    FaTwitter,
+    FaYoutube,
+    FaPinterest,
+    FaTripadvisor,
+    FaInstagram,
+  } from 'react-icons/fa';
+import {
+  MapPin,
+  Phone,
+  Mail,
+} from "lucide-react";
+
+const links = {
+  company: [
+    { label: "About Us", href: "/about-us" },
+    { label: "Our Team", href: "/our-team" },
+    { label: "Careers", href: "/careers" },
+    { label: "Contact Us", href: "/contact-us" },
+  ],
+  tours: [
+    { label: "Cultural Tours", href: "#" },
+    { label: "Adventure Tours", href: "#" },
+    { label: "Wildlife Tours", href: "#" },
+    { label: "Beach Holidays", href: "#" },
+  ],
+  support: [
+    { label: "FAQs", href: "#" },
+    { label: "Terms & Conditions", href: "#" },
+    { label: "Privacy Policy", href: "#" },
+    { label: "Travel Insurance", href: "#" },
+  ],
+};
+
+const socialLinks = [
+  { icon: FaFacebookF, href: "#", label: "Facebook", colors: "text-blue-600 hover:text-blue-700" },
+  { icon: FaTwitter, href: "#", label: "Twitter", colors:"text-blue-400 hover:text-blue-500" },
+  { icon: FaInstagram, href: "#", label: "Instagram", colors: "text-red-600 hover:text-red-700"},
+  { icon: FaYoutube, href: "#", label: "YouTube", colors: "text-red-600 hover:text-red-700"},
+  { icon: FaPinterest, href: "#", label: "Pinterest" , colors: "text-red-500 hover:text-red-600" },
+  { icon: FaTripadvisor, href: "#", label: "TripAdvisor" ,colors:"text-green-600 hover:text-green-700"},
+];
 
 const Footer = () => {
   return (
-    <footer className="bg-[#002244] text-white py-8 ">
-      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 ">
-      
+    <footer className="bg-gradient-to-br from-blue-900 to-blue-800">
+      <div className="max-w-7xl mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
+          {/* Left Column */}
+          <div className="space-y-8">
+            <div>
+            <h2 className="text-2xl font-bold text-white mb-2">Tranquil Sri Lanka</h2>
+              <p className="text-gray-300 max-w-md">
+                Experience the beauty and serenity of Sri Lanka with our
+                carefully curated tours and authentic local experiences.
+              </p>
+            </div>
 
-        <div className='text-center px-10'>
-        <Image
-        src={"/logo.png"}
-        alt={"logo"}
-        width={250}
-        height={300}
-        className=" "
-      />
-          <p className="mb-4 font-semibold ">Featured Tour Planner</p>
-          <div className="flex space-x-4 justify-center">
-            <a href="#" aria-label="Facebook" className="text-blue-600 hover:text-blue-700">
-              <FaFacebookF size={24} />
-            </a>
-            <a href="#" aria-label="Twitter" className="text-blue-400 hover:text-blue-500">
-              <FaTwitter size={24} />
-            </a>
-            <a href="#" aria-label="YouTube" className="text-red-600 hover:text-red-700">
-              <FaYoutube size={24} />
-            </a>
-            <a href="#" aria-label="TripAdvisor" className="text-green-600 hover:text-green-700">
-              <FaTripadvisor size={24} />
-            </a>
-            <a href="#" aria-label="Pinterest" className="text-red-500 hover:text-red-600">
-              <FaPinterest size={24} />
-            </a>
+            <div className="space-y-4">
+              <div className="flex items-center text-gray-300">
+                <MapPin className="w-5 h-5 mr-3" />
+                <span>123 Temple Road, Colombo 03, Sri Lanka</span>
+              </div>
+              <div className="flex items-center text-gray-300">
+                <Phone className="w-5 h-5 mr-3" />
+                <span>+94 11 234 5678</span>
+              </div>
+              <div className="flex items-center text-gray-300">
+                <Mail className="w-5 h-5 mr-3" />
+                <span>info@tranquilsrilanka.com</span>
+              </div>
+            </div>
+
+            <div className="flex gap-4">
+              {socialLinks.map(({ icon: Icon, href, label, colors }) => (
+                <a
+                  key={label}
+                  href={href}
+                  aria-label={label}
+                  className= {` ${colors} transition-colors `}
+                >
+                  <Icon className="w-6 h-6" />
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Right Column */}
+          <div className="space-y-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {Object.entries(links).map(([category, items]) => (
+                <div key={category}>
+                  <h3 className="text-lg font-semibold mb-4 text-white capitalize">
+                    {category}
+                  </h3>
+                  <ul className="space-y-2">
+                    {items.map((item) => (
+                      <li key={item.label}>
+                        <a
+                          href={item.href}
+                          className="text-gray-300 hover:text-white transition-colors"
+                        >
+                          {item.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* Top Destinations */}
-        <div>
-          <h3 className="font-bold mb-3">Top Destinations</h3>
-          <ul className="space-y-1">
-            {['Anuradhapura', 'Colombo', 'Ella', 'Galle', 'Kandy', 'Nuwaraeliya', 'Polonnaruwa', 'Trincomalee', 'Yala'].map((destination) => (
-              <li key={destination}>
-                <a href="#" className="hover:underline">
-                  {destination}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Travel Interests */}
-        <div>
-          <h3 className="font-bold mb-3">Travel Interests</h3>
-          <ul className="space-y-1">
-            {['Adventure Travel', 'Wildlife & Nature', 'Art & Culture', 'Beaches', 'Family Holidays', 'Festivals', 'Food & Drink', 'Road Trips', 'Romance'].map((interest) => (
-              <li key={interest}>
-                <a href="#" className="hover:underline">
-                  {interest}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* About Us */}
-        <div>
-          <h3 className="font-bold mb-3">About Us</h3>
-          <ul className="space-y-1">
-            {['Privacy Policy', 'About Us', 'Tour Planner', 'Terms & Conditions', 'Contact Us'].map((link) => (
-              <li key={link}>
-                <a href="#" className="hover:underline">
-                  {link}
-                </a>
-              </li>
-            ))}
-          </ul>
+        {/* Bottom Bar */}
+        <div className="pt-8 mt-8 border-t border-white/10">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-4">
+            <p className="text-gray-300 text-sm">
+              © {new Date().getFullYear()} Tranquil Sri Lanka. All rights
+              reserved.
+            </p>
+          </div>
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
