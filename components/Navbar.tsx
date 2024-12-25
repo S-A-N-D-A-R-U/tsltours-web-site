@@ -56,18 +56,18 @@ const Navbar = () => {
           <div className="border-b border-gray-100">
             <div className="flex justify-end items-center py-2 px-4 space-x-4">
               <a
-                href="mailto:info@srilanka.com"
+                href="mailto:tranquilsrilanka@gmail.com"
                 className="flex items-center gap-1 hover:text-blue-600"
               >
                 <Mail className="h-4 w-4" />
-                <span>info@srilanka.com</span>
+                <span>tranquilsrilanka@gmail.com</span>
               </a>
               <a
-                href="tel:+94123456789"
+                href="tel:+94779797597"
                 className="flex items-center gap-1 hover:text-blue-600"
               >
                 <Phone className="h-4 w-4" />
-                <span>+94 12 345 6789</span>
+                <span>+94 77 979 7597</span>
               </a>
               <button className="flex items-center gap-1 text-sm text-gray-600 hover:text-blue-600">
           <Globe className="h-4 w-4" />
@@ -79,7 +79,7 @@ const Navbar = () => {
           <div className="relative flex justify-between px-4 py-2">
             {/* Desktop Navigation */}
             <div className="hidden  md:flex items-center justify-center w-full space-x-8">
-              <a href="#" className="text-gray-700 hover:text-blue-600">
+              <a href="/" className="text-gray-700 hover:text-blue-600">
                 Home
               </a>
 
@@ -130,16 +130,19 @@ const Navbar = () => {
               </div>
 
               <a href="#" className="text-gray-700 hover:text-blue-600">
-                Things to Do
+              Seat in Coach
               </a>
               <a href="#" className="text-gray-700 hover:text-blue-600">
-                Travel Guide
+              Things to Do
               </a>
               <a href="#" className="text-gray-700 hover:text-blue-600">
-                Hotels
+              Offers
               </a>
               <a href="#" className="text-gray-700 hover:text-blue-600">
-                Offers
+              Transfer
+              </a>
+              <a href="#" className="text-gray-700 hover:text-blue-600">
+              Travel Guide
               </a>
             </div>
 

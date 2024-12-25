@@ -37,11 +37,11 @@ const links = {
 };
 
 const socialLinks = [
-  { icon: FaFacebookF, href: "#", label: "Facebook", colors: "text-blue-600 hover:text-blue-700" },
+  { icon: FaFacebookF, href: "https://www.facebook.com/TranquilSrilankaTours", label: "Facebook", colors: "text-blue-600 hover:text-blue-700" },
   { icon: FaTwitter, href: "#", label: "Twitter", colors:"text-blue-400 hover:text-blue-500" },
-  { icon: FaInstagram, href: "#", label: "Instagram", colors: "text-red-600 hover:text-red-700"},
-  { icon: FaYoutube, href: "#", label: "YouTube", colors: "text-red-600 hover:text-red-700"},
-  { icon: FaPinterest, href: "#", label: "Pinterest" , colors: "text-red-500 hover:text-red-600" },
+  { icon: FaInstagram, href: "https://www.instagram.com/tranquil_srilanka/", label: "Instagram", colors: "text-red-600 hover:text-red-700"},
+  { icon: FaYoutube, href: "https://www.youtube.com/@tranquilsrilanka", label: "YouTube", colors: "text-red-600 hover:text-red-700"},
+  { icon: FaPinterest, href: "https://www.pinterest.com/tranquilsl", label: "Pinterest" , colors: "text-red-500 hover:text-red-600" },
   { icon: FaTripadvisor, href: "#", label: "TripAdvisor" ,colors:"text-green-600 hover:text-green-700"},
 ];
 
@@ -63,15 +63,15 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-center text-gray-300">
                 <MapPin className="w-5 h-5 mr-3" />
-                <span>123 Temple Road, Colombo 03, Sri Lanka</span>
+                <span>No 60, Polgolla Watta, Polgolla, Kandy, Sri Lanka</span>
               </div>
               <div className="flex items-center text-gray-300">
                 <Phone className="w-5 h-5 mr-3" />
-                <span>+94 11 234 5678</span>
+                <span>+94 77 979 7597</span>
               </div>
               <div className="flex items-center text-gray-300">
                 <Mail className="w-5 h-5 mr-3" />
-                <span>info@tranquilsrilanka.com</span>
+                <span>tranquilsrilanka@gmail.com</span>
               </div>
             </div>
 
