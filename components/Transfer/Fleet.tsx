@@ -8,7 +8,7 @@ const vehicles = [
   {
     id: '1',
     name: 'Luxury Sedan',
-    image: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/2016-2021_Toyota_Premio.jpg/1920px-2016-2021_Toyota_Premio.jpg',
     capacity: {
       passengers: 4,
       luggage: 2,
@@ -16,9 +16,8 @@ const vehicles = [
     },
     description: 'Perfect for business travel or small family trips. Experience comfort and style.',
     images: [
-      'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&q=80'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/2016-2021_Toyota_Premio.jpg/1920px-2016-2021_Toyota_Premio.jpg',
+      
     ],
     features: [
       'Air Conditioning',
@@ -51,7 +50,7 @@ const vehicles = [
   {
     id: '2',
     name: 'Premium Van',
-    image: 'https://images.unsplash.com/photo-1464219789935-c2d9d9eb4b19?auto=format&fit=crop&q=80',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/5/57/Nissan_CARAVAN_VAN_GRAND_PREMIUM_GX_PROSTYLE_%283BF-VR2E26%29_front.jpg',
     capacity: {
       passengers: 8,
       luggage: 4,
@@ -59,9 +58,8 @@ const vehicles = [
     },
     description: 'Ideal for group travel and family vacations. Spacious and comfortable.',
     images: [
-      'https://images.unsplash.com/photo-1464219789935-c2d9d9eb4b19?auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1519566335946-e6f65f0f4fdf?auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&q=80'
+      'https://upload.wikimedia.org/wikipedia/commons/5/57/Nissan_CARAVAN_VAN_GRAND_PREMIUM_GX_PROSTYLE_%283BF-VR2E26%29_front.jpg',
+    
     ],
     features: [
       'Air Conditioning',

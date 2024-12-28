@@ -1,9 +1,9 @@
 import React from 'react';
-import { ShieldCheck, UserCheck, Car } from 'lucide-react';
+import {  SprayCan, ShieldCheck, UserCheck, Car } from 'lucide-react';
 
 const safetyMeasures = [
   {
-    icon: Car,
+    icon: SprayCan,
     title: 'Regular Sanitization',
     description: 'Vehicles are thoroughly sanitized before and after each transfer'
   },

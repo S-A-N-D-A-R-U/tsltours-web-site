@@ -1,35 +1,41 @@
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
+"use client";
+import Image from "next/image";
+import { ArrowRight } from "lucide-react"; // Ensure you have the required icon library installed
 
-export default function Hero() {
+const HeroSection: React.FC = () => {
   return (
-    <div className="relative h-[600px] flex items-center">
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: 'url("https://images.unsplash.com/photo-1464219789935-c2d9d9eb4b19?auto=format&fit=crop&q=80")',
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
-        <div className="absolute inset-0 bg-black/50" />
+    <div className="relative h-[600px] flex items-center justify-center">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/transfer1.jpeg"
+          alt="Transfer Background"
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/35" />
       </div>
-      
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-3xl">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Hassle-Free Transfers to Your Destination
-          </h1>
-          <p className="text-xl text-gray-200 mb-8">
-            Book your private or shared transfers with comfort and reliability. Experience seamless travel with our professional service.
-          </p>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold flex items-center gap-2 transition-colors">
-            Book Your Transfer Now
-            <ArrowRight className="w-5 h-5" />
-          </button>
-        </div>
+
+      {/* Hero Content */}
+      <div className="relative z-10 flex flex-col items-center text-center px-4">
+        <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          Hassle-Free Transfers to Your Destination
+        </h1>
+        <p className="text-lg md:text-xl text-gray-200 mb-8">
+          Book your private or shared transfers with comfort and reliability.
+          Experience seamless travel with our professional service.
+        </p>
+        <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 md:px-8 md:py-4 rounded-lg font-semibold flex items-center gap-2 transition-colors"
+        onClick={() => document.getElementById('booking-form')?.scrollIntoView({ behavior: 'smooth' })}
+        >
+          Book Your Transfer Now
+          <ArrowRight className="w-5 h-5" />
+        </button>
       </div>
     </div>
   );
-}
+};
+
+export default HeroSection;

@@ -1,5 +1,6 @@
-import React from 'react';
-import { ArrowRight, Phone } from 'lucide-react';
+"use client"
+import React from "react";
+import { ArrowRight, Phone } from "lucide-react";
 
 export default function CallToAction() {
   return (
@@ -9,10 +10,18 @@ export default function CallToAction() {
           Ready to Travel? Book Your Transfer Today!
         </h2>
         <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-          Experience hassle-free travel with our professional transfer service. Book now and enjoy a comfortable journey to your destination.
+          Experience hassle-free travel with our professional transfer service.
+          Book now and enjoy a comfortable journey to your destination.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-blue-50 transition-colors">
+          <button
+            className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-blue-50 transition-colors"
+            onClick={() =>
+              document
+                .getElementById("booking-form")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
+          >
             Book Now
             <ArrowRight className="w-5 h-5" />
           </button>

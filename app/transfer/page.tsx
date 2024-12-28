@@ -10,14 +10,16 @@ import React from 'react'
 
 const TransferPage = () => {
   return (
-    <div className='min-h-screen bg-gray-50'>
+    <div className='min-h-screen  bg-gray-50'>
         <Hero/>
+        <div className='max-w-7xl mx-auto'>
         <TransferForm/>
         <Features/>
         <PopularRoutes/>
         <Fleet/>
         <FAQ/>
         <Safety/>
+        </div>
         <CallToAction/>
     </div>
   )

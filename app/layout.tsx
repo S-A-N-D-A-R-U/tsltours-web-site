@@ -1,9 +1,9 @@
-import type { Metadata } from "next"
+import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "slick-carousel/slick/slick.css";
-
+import { BookingProvider } from "@/contexts/BookingContext";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,9 +18,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Navbar/>
-        <main className="relative overflow-hidden ">{children}</main>
-        <Footer/>
+        <BookingProvider>
+          <Navbar />
+          <main className="relative overflow-hidden ">{children}</main>
+          <Footer />
+        </BookingProvider>
       </body>
     </html>
   );

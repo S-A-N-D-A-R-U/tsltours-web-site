@@ -1,5 +1,7 @@
+"use client";
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import { useBooking } from '@/contexts/BookingContext';
 
 const routes = [
   {
@@ -29,6 +31,15 @@ const routes = [
 ];
 
 export default function PopularRoutes() {
+  const { setPickupLocation, setDropoffLocation } = useBooking();
+
+  const handleBookNow = (from: string, to: string) => {
+    setPickupLocation(from); // Set the pickup location
+    setDropoffLocation(to);  // Set the dropoff location
+    // Smooth scroll to the booking form
+    document.getElementById('booking-form')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="py-16">
       <div className="container mx-auto px-4">
@@ -54,7 +65,10 @@ export default function PopularRoutes() {
                   <div>Starting from {route.price}</div>
                 </div>
                 
-                <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-medium transition-colors">
+                <button 
+                  onClick={() => handleBookNow(route.from, route.to)}
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-medium transition-colors"
+                >
                   Book Now
                 </button>
               </div>
